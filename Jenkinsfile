@@ -15,7 +15,7 @@ pipeline {
             {
                 echo 'Hello World'
 		echo 'Building.....'
-                bat 'mvn clean install'
+                bat 'mvn clean install package'
             }
         }
 	stage ('deploy')
