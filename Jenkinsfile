@@ -23,7 +23,7 @@ pipeline {
 		    steps
 		    {
 			    bat 'dir'
-			    bat 'xcopy /S /Q /Y /F target\\*.war C:\\apache-tomcat-8.5.61\\webapps\\'
+			    bat 'xcopy /S /Q /Y /F target\\*.war "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"'
 			    //bat 'C:\\apache-tomcat-8.5.61\\bin\\catalina.bat restart'
 		    }
 	    }
@@ -40,8 +40,8 @@ pipeline {
             steps 
             {
 		echo 'Sonar Analysis....'
-                //withSonarQubeEnv("sonarserver")
-                withSonarQubeEnv(credentialsId: 'sonar-api-key', installationName: 'sonarserver') 
+                withSonarQubeEnv("Sonar")
+                //withSonarQubeEnv(credentialsId: 'sonar-api-key', installationName: 'sonarserver') 
                 {
                     bat "mvn sonar:sonar"
                 }   
@@ -54,7 +54,7 @@ pipeline {
 			echo 'Uploading....'
 		        rtMavenDeployer (
     			    id: 'deployer-unique-id',
-		            serverId: 'artifactory-server',
+		            serverId: 'Artifactory Server',
 		            releaseRepo: 'example-repo-local',
 		            snapshotRepo: 'example-repo-local' 
 		        )
@@ -64,7 +64,7 @@ pipeline {
 		        deployerId: 'deployer-unique-id' 
 		        )
 		        rtPublishBuildInfo (
-		            serverId: 'artifactory-server' 
+		            serverId: 'Artifactory Server' 
 		                )
 	        }
 	}
