@@ -1,9 +1,9 @@
 pipeline {
     agent any
     
-    tools
+   environment
     {
-        maven "maven3"
+       PATH = "/opt/maven3/bin:$PATH"
     }
     
     stages {
