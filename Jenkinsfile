@@ -1,9 +1,11 @@
 pipeline {
     agent any
     
-    environment{
-        PATH = "/Freshers/Devops/apache-maven-3.6.3/bin:$PATH"
+    tools
+    {
+        maven "maven3"
     }
+    
     stages {
         stage('Git Checkout') {
             steps {
