@@ -12,7 +12,7 @@
 First Number :<input type="number" name="t1" style=" border: 2px solid black"><br>
 Second Number :<input type="number" name="t2" style=" border: 2px solid black"><br>
 
-<button type="submit" style="color:green;font-size: 16px;border:2px solid black;width: 63px;margin-top: 13px">Add</button>
+<button type="submit" style="color:green;font-size: 18px;border:2px solid black;width: 63px;margin-top: 13px">Add</button>
 
 </form>
 <h2>Subtract</h2>
