@@ -25,7 +25,7 @@ Second Number :<input type="number" name="t4" style=" border: 2px solid black"><
 
 </form>
 
-<h3>End</h3>
+<h3>Ending</h3>
 </div>
 
 </body>
