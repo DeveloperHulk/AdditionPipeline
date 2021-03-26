@@ -22,8 +22,10 @@ Second Number :<input type="number" name="t4" style=" border: 2px solid black"><
 
 <button type="submit" style="color:green;font-size: 16px;border:2px solid black;width: 75px;margin-top: 13px">Subtract</button>
 
-<h3>End</h3>
+
 </form>
+
+<h3>End</h3>
 </div>
 
 </body>
